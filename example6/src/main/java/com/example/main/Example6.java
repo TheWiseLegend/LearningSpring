@@ -14,6 +14,8 @@ public class Example6 {
         System.out.println("Primary Vehicle name from Spring context: " + vehicle.getName());
 
         vehicle.printHello();
+        context.close();
+
 
     }
 }
