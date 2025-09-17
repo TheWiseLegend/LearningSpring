@@ -54,7 +54,5 @@ public class Example7 {
         } else {
             System.out.println("Bmw vehicle bean found with context: " + bmwVehicle.getName());
         }
-
-
     }
 }
