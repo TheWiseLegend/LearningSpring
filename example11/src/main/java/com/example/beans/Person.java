@@ -6,14 +6,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class Person {
 
-    public Person(){
-        System.out.println("Person bean created by Spring");
-    }
-
     private String name = "Amr";
+    private final Vehicle vehicle;
 
     @Autowired
-    private Vehicle vehicle;
+    public Person(Vehicle vehicle){
+        this.vehicle = vehicle;
+    }
 
     public String getName() {
         return name;
@@ -27,7 +26,7 @@ public class Person {
         return vehicle;
     }
 
-    public void setVehicle() {
-        this.vehicle = vehicle;
-    }
+//    public void setVehicle() {
+//        this.vehicle = vehicle;
+//    }
 }
