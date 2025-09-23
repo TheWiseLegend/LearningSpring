@@ -6,7 +6,7 @@ import com.example.config.ProjectConfig;
 import jakarta.annotation.PostConstruct;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class Example11 {
+public class Example12 {
 
   public static void main(String[] args) {
 
