@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class  ProjectConfig {
 
-    @Bean
+    @Bean()
     Vehicle vehicle1(){
         var veh = new Vehicle();
         veh.setName("Proton Saga");
