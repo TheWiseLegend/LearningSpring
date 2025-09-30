@@ -1,0 +1,13 @@
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/aspects/LoggerAspect.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/aspects/VehicleStartCheckAspect.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/config/ProjectConfig.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/implementation/BoseSpeakers.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/implementation/BridgeStoneTyres.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/implementation/MichelinTyres.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/implementation/SonySpeakers.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/interfaces/LogAspect.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/interfaces/Speakers.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/interfaces/Tyres.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/main/Example17.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/model/Song.java
+/Users/amrkhaledsamir.ibrahim/IdeaProjects/LearningSpring/example17_AOPIntro/src/main/java/com/example/services/VehicleServices.java
