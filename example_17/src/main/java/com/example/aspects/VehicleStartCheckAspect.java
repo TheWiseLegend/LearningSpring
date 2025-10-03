@@ -17,8 +17,8 @@ public class VehicleStartCheckAspect {
 
     private Logger logger = Logger.getLogger(VehicleStartCheckAspect.class.getName());
 
-    @Before("execution(* com.example.services.*.*(..)) && args(vehicleStarted,..)")
-    public void checkVehicleStarted(JoinPoint joinPoint, boolean vehicleStarted) throws Throwable {
+    @Before("execution(* com.example.services.*.*(..)) && args(vehicleStarted, ..)")
+    public void isVehicleStarted(JoinPoint joinPoint, boolean vehicleStarted) {
         if(!vehicleStarted){
             throw new RuntimeException("Vehicle not started");
         }

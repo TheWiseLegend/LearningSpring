@@ -23,38 +23,14 @@ public class VehicleServices {
 
   @LogAspect
   public String playMusic(boolean vehicleStarted, Song song) {
-    String music = null;
-
-    if (vehicleStarted) {
-      music = speakers.makeSound(song);
-    } else {
-      logger.log(Level.SEVERE, "Vehicle not started to perform the" +
-          " operation");
-    }
     return speakers.makeSound(song);
   }
 
   public String moveVehicle(boolean vehicleStarted) {
-
-    String status = null;
-    if (vehicleStarted) {
-      status = tyres.rotate();
-    } else {
-      logger.log(Level.SEVERE, "Vehicle not started to perform the" +
-          " operation");
-    }
     return tyres.rotate();
   }
 
   public String applyBrake(boolean vehicleStarted) {
-
-    String status = null;
-    if (vehicleStarted) {
-      status = tyres.stop();
-    } else {
-      logger.log(Level.SEVERE, "Vehicle not started to perform the" +
-          " operation");
-    }
     return tyres.stop();
   }
 
