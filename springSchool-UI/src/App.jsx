@@ -7,23 +7,25 @@ function App() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        // Fetch data from Spring Boot API
-        fetch('http://localhost:8080/api/welcome')
-            .then(response => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch("http://localhost:8080/api/welcome");
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error("Failed to fetch data from server");
                 }
-                return response.json();
-            })
-            .then(data => {
+                const data = await response.json();
                 setData(data);
-                setLoading(false);
-            })
-            .catch(error => {
+            } catch (error) {
+                console.error(error);
                 setError(error.message);
+            } finally {
                 setLoading(false);
-            });
-    }, []); // Empty array means this runs once when component mounts
+            }
+        };
+
+        fetchData();
+    }, [])
+
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;

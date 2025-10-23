@@ -6,12 +6,13 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$USER_HOME$/Downloads/spring-3.4.2/example_17/pom.xml" />
-        <option value="$PROJECT_DIR$/../example18/pom.xml" />
+        <option value="$PROJECT_DIR$/../example19/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../example19/pom.xml" />
       </set>
     </option>
   </component>
