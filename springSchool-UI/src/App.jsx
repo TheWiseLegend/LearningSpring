@@ -35,6 +35,8 @@ function App() {
             <h1>{data.title}</h1>
             <h2>{data.message}</h2>
             <p>{data.description}</p>
+            <p>{data.bio}</p>
+            <p>Hello</p>
         </div>
     );
 }

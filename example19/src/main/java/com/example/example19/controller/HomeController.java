@@ -8,17 +8,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
-@RequestMapping(value = {"","/","/api"})
+
+@RequestMapping("/api")
 @RestController
 @CrossOrigin(origins = "http://localhost:5173")
 public class HomeController {
 
   @GetMapping("/welcome")
   public Map<String, String> getWelcomeMessage() {
-      return Map.of(
-              "title", "Spring School",
-              "message", "Welcome to Spring School!",
-              "description", "Learning Spring Boot with React"
-      );
+    return Map.of(
+        "title", "Spring School",
+        "message", "Welcome to Spring School!",
+        "description", "Learning Spring Boot with React",
+        "bio", "This is Amr's Spring school"
+
+    );
   }
 }
