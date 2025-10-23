@@ -21,7 +21,6 @@ public class HomeController {
         "message", "Welcome to Spring School!",
         "description", "Learning Spring Boot with React",
         "bio", "This is Amr's Spring school"
-
     );
   }
 }
