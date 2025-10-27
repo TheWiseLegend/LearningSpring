@@ -1,79 +1,49 @@
 import { useState, useEffect } from "react";
-
-interface WelcomeData {
-    title: string;
-    message: string;
-    description: string;
-    bio: string;
-}
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import About from "./components/About";
+import WhyChoose from "./components/WhyChoose";
+import Statistics from "./components/Statistics";
+import Testimonials from "./components/Testimonials";
+import Courses from "./components/Courses";
+import CallToAction from "./components/CallToAction";
+import Footer from "./components/Footer";
 
 function App() {
-    const [data, setData] = useState<WelcomeData | null>(null);
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+    const [darkMode, setDarkMode] = useState<boolean>(() => {
+        const saved = localStorage.getItem('theme');
+        return saved === 'dark';
+    });
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(
-                    "http://localhost:8080/api/welcome"
-                );
-                if (!response.ok) {
-                    throw new Error("Failed to fetch data from server");
-                }
-                const data: WelcomeData = await response.json();
-                setData(data);
-            } catch (error) {
-                console.error(error);
-                setError((error as Error).message);
-            } finally {
-                setLoading(false);
-            }
-        };
+        localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+        // Tailwind v4 still uses the 'dark' class approach
+        if (darkMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, [darkMode]);
 
-        fetchData();
-    }, []);
-
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="text-xl text-gray-600">Loading...</div>
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="text-xl text-red-600">Error: {error}</div>
-            </div>
-        );
-    }
-
-    if (!data) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="text-xl text-gray-600">No data</div>
-            </div>
-        );
-    }
+    const toggleTheme = () => {
+        setDarkMode(!darkMode);
+        console.log('Theme toggled to:', !darkMode);
+        console.log('HTML classes:', document.documentElement.className);
+    };
 
     return (
-        <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8">
-            <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-12 space-y-6">
-                <h1 className="text-5xl font-bold text-gray-900 text-center">
-                    {data.title}
-                </h1>
-                <h2 className="text-3xl font-semibold text-blue-600 text-center">
-                    {data.message}
-                </h2>
-                <p className="text-xl text-gray-700 text-center">
-                    {data.description}
-                </p>
-                <p className="text-lg text-gray-600 text-center italic">
-                    {data.bio}
-                </p>
-            </div>
+        <div className={`min-h-screen ${darkMode ? 'dark' : ''}`}>
+            <Header darkMode={darkMode} toggleTheme={toggleTheme} />
+            <Hero />
+            <Features />
+            <About />
+            <WhyChoose />
+            <Statistics />
+            <Testimonials />
+            <Courses />
+            <CallToAction />
+            <Footer />
         </div>
     );
 }
