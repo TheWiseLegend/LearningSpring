@@ -6,7 +6,7 @@ const About: React.FC = () => {
     ];
 
     return (
-        <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <section id="about" className="py-20 bg-gray-50 transition-colors duration-300">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-center gap-12">
                     {/* Image Section */}
@@ -18,11 +18,11 @@ const About: React.FC = () => {
                             </div>
                             
                             {/* Info box overlay */}
-                            <div className="absolute -bottom-8 -right-8 bg-white dark:bg-gray-900 p-6 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 max-w-xs">
-                                <h6 className="font-bold text-gray-900 dark:text-white mb-2">
+                            <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-xl shadow-xl border border-gray-200 max-w-xs">
+                                <h6 className="font-bold text-gray-900 mb-2">
                                     Get an Appointment Today!
                                 </h6>
-                                <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                                <p className="text-sm text-gray-600 mb-3">
                                     Call today to know more details and to talk with our expert.
                                 </p>
                                 <a 
@@ -37,10 +37,10 @@ const About: React.FC = () => {
 
                     {/* Content Section */}
                     <div className="lg:w-1/2 lg:pl-8">
-                        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-6">
                             We Are The Best Choice For Your Child
                         </h2>
-                        <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                             With over 20 years of experience, best teachers, world-class infrastructure,
                             larger Alumni community, we are the best choice for your child education.
                         </p>
@@ -49,7 +49,7 @@ const About: React.FC = () => {
                             {benefits.map((benefit, index) => (
                                 <li key={index} className="flex items-center">
                                     <span className="text-green-500 mr-3 text-xl">✓</span>
-                                    <span className="text-gray-700 dark:text-gray-300">{benefit}</span>
+                                    <span className="text-gray-700">{benefit}</span>
                                 </li>
                             ))}
                         </ul>

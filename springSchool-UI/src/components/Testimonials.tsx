@@ -46,7 +46,7 @@ const Testimonials: React.FC = () => {
     }, [testimonials.length]);
 
     return (
-        <section id="testimonials" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <section id="testimonials" className="py-20 bg-white transition-colors duration-300">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center">
                     <div className="relative overflow-hidden">
@@ -56,12 +56,12 @@ const Testimonials: React.FC = () => {
                         >
                             {testimonials.map((testimonial, index) => (
                                 <div key={index} className="w-full flex-shrink-0 px-8">
-                                    <div className="bg-gray-50 dark:bg-gray-800 p-12 rounded-2xl">
+                                    <div className="bg-gray-50 p-12 rounded-2xl">
                                         <div className="text-6xl mb-6">{testimonial.avatar}</div>
-                                        <blockquote className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed italic">
+                                        <blockquote className="text-xl text-gray-700 mb-8 leading-relaxed italic">
                                             "{testimonial.quote}"
                                         </blockquote>
-                                        <div className="text-lg font-semibold text-gray-900 dark:text-white">
+                                        <div className="text-lg font-semibold text-gray-900">
                                             - {testimonial.name}
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@ const Testimonials: React.FC = () => {
                                 className={`w-3 h-3 rounded-full transition-colors duration-300 ${
                                     index === currentIndex 
                                         ? 'bg-blue-600' 
-                                        : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400'
+                                        : 'bg-gray-300 hover:bg-gray-400'
                                 }`}
                             />
                         ))}

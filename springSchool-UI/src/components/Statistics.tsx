@@ -59,14 +59,14 @@ const Statistics: React.FC = () => {
         <section 
             ref={sectionRef}
             id="stats" 
-            className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+            className="py-20 bg-gray-50 transition-colors duration-300"
         >
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">
                         Our Statistics
                     </p>
-                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+                    <h2 className="text-4xl font-bold text-gray-900">
                         We are Proud to Share with You
                     </h2>
                 </div>
@@ -74,14 +74,14 @@ const Statistics: React.FC = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     {stats.map((stat, index) => (
                         <div key={index} className="text-center group">
-                            <div className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                                 <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                                     {stat.icon}
                                 </div>
                                 <div className="text-3xl font-bold text-blue-600 mb-2">
                                     {counts[index].toLocaleString()}
                                 </div>
-                                <p className="text-gray-600 dark:text-gray-300 font-medium">
+                                <p className="text-gray-600 font-medium">
                                     {stat.label}
                                 </p>
                             </div>

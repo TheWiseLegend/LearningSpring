@@ -1,12 +1,12 @@
 const WhyChoose: React.FC = () => {
     return (
-        <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <section className="py-20 bg-white transition-colors duration-300">
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">
                         Why Choose Us
                     </p>
-                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+                    <h2 className="text-4xl font-bold text-gray-900">
                         Experienced Teachers And Safe Environment
                     </h2>
                 </div>
