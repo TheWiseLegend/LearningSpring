@@ -1,7 +1,7 @@
 const About: React.FC = () => {
     const benefits = [
         "Special Education",
-        "Access more than 100K online courses", 
+        "Access more than 100K online courses",
         "Traditional Academies"
     ];
 
@@ -13,10 +13,10 @@ const About: React.FC = () => {
                     <div className="lg:w-1/2 relative">
                         <div className="relative">
                             {/* Main image placeholder */}
-                            <div className="w-full h-96 bg-gradient-to-br from-blue-200 to-purple-300 rounded-2xl flex items-center justify-center">
+                            <div className="w-full h-96 bg-linear-to-br from-blue-200 to-purple-300 rounded-2xl flex items-center justify-center">
                                 <span className="text-6xl">📖</span>
                             </div>
-                            
+
                             {/* Info box overlay */}
                             <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-xl shadow-xl border border-gray-200 max-w-xs">
                                 <h6 className="font-bold text-gray-900 mb-2">
@@ -25,8 +25,8 @@ const About: React.FC = () => {
                                 <p className="text-sm text-gray-600 mb-3">
                                     Call today to know more details and to talk with our expert.
                                 </p>
-                                <a 
-                                    href="tel:1-800-856-4321" 
+                                <a
+                                    href="tel:1-800-856-4321"
                                     className="flex items-center text-blue-600 hover:text-blue-700 font-semibold"
                                 >
                                     <span className="mr-2">📞</span> 1-800-856-4321
@@ -44,7 +44,7 @@ const About: React.FC = () => {
                             With over 20 years of experience, best teachers, world-class infrastructure,
                             larger Alumni community, we are the best choice for your child education.
                         </p>
-                        
+
                         <ul className="space-y-4 mb-8">
                             {benefits.map((benefit, index) => (
                                 <li key={index} className="flex items-center">
@@ -53,7 +53,7 @@ const About: React.FC = () => {
                                 </li>
                             ))}
                         </ul>
-                        
+
                         <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                             Apply Now
                         </button>
