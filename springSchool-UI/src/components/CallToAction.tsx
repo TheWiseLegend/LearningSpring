@@ -1,6 +1,6 @@
 const CallToAction: React.FC = () => {
     return (
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <section className="py-20 bg-linear-to-r from-blue-600 to-purple-600">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-center justify-between">
                     {/* Left Content */}
@@ -18,8 +18,8 @@ const CallToAction: React.FC = () => {
                         {/* Phone Number */}
                         <div className="flex items-center text-white">
                             <span className="text-2xl mr-3">📞</span>
-                            <a 
-                                href="tel:+1-23-673-458-1111" 
+                            <a
+                                href="tel:+1-23-673-458-1111"
                                 className="text-xl font-semibold hover:text-blue-200 transition-colors"
                             >
                                 +1(23) 673 458 1111

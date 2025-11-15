@@ -10,7 +10,7 @@ const Courses: React.FC = () => {
             image: "📖"
         },
         {
-            title: "Best Meditation Classes", 
+            title: "Best Meditation Classes",
             description: "Special program focusing the meditation to encourage students from early age.",
             lessons: 72,
             rating: 4.6,
@@ -30,7 +30,7 @@ const Courses: React.FC = () => {
     ];
 
     return (
-        <section id="courses" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 transition-colors duration-300">
+        <section id="courses" className="py-20 bg-linear-to-br from-blue-50 to-indigo-100 transition-colors duration-300">
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">
@@ -45,7 +45,7 @@ const Courses: React.FC = () => {
                     {courses.map((course, index) => (
                         <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
                             {/* Course Image */}
-                            <div className="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200">
+                            <div className="relative h-48 bg-linear-to-br from-gray-100 to-gray-200">
                                 <div className="absolute inset-0 flex items-center justify-center text-6xl">
                                     {course.image}
                                 </div>
