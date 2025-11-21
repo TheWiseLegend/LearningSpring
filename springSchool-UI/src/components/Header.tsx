@@ -8,12 +8,15 @@ const Header: React.FC = () => {
             <div className="container mx-auto px-4">
                 <nav className="flex items-center justify-between py-4">
                     {/* Logo */}
-                    <div className="flex items-center">
+                    <a
+                        href="#home"
+                        className="ml-2 text-blue-600 font-medium hover:text-blue-700 transition-colors"
+                        >
                         <span className="text-2xl mr-2">🎓</span>
                         <span className="text-xl font-bold text-gray-900">
-                            Eazy School
+                            Spring School
                         </span>
-                    </div>
+                    </a>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">

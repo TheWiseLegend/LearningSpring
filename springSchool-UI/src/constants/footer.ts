@@ -28,7 +28,7 @@ export const EXPLORE_LINKS: FooterLink[] = [
 // Footer copyright info
 export const FOOTER_COPYRIGHT = {
     year: 2025,
-    companyName: "Spring Eazy School",
+    companyName: "Spring School",
     designerName: "AmrIbrahim",
     designerUrl: "amribrahim.tech",
 };
