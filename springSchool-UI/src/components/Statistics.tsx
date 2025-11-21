@@ -1,22 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-
-interface StatItem {
-    icon: string;
-    count: number;
-    label: string;
-}
+import { STATISTICS } from "../constants";
 
 const Statistics: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [counts, setCounts] = useState([0, 0, 0, 0]);
     const sectionRef = useRef<HTMLElement>(null);
-
-    const stats: StatItem[] = [
-        { icon: "🎓", count: 2458, label: "Current Students" },
-        { icon: "🏢", count: 12, label: "Our Branches" },
-        { icon: "📚", count: 128, label: "Total Courses" },
-        { icon: "🏆", count: 543, label: "Awards Won" }
-    ];
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -37,7 +25,7 @@ const Statistics: React.FC = () => {
     }, [isVisible]);
 
     const startCounting = () => {
-        stats.forEach((stat, index) => {
+        STATISTICS.forEach((stat, index) => {
             let current = 0;
             const increment = stat.count / 100;
             const timer = setInterval(() => {
@@ -46,7 +34,7 @@ const Statistics: React.FC = () => {
                     current = stat.count;
                     clearInterval(timer);
                 }
-                setCounts(prev => {
+                setCounts((prev) => {
                     const newCounts = [...prev];
                     newCounts[index] = Math.floor(current);
                     return newCounts;
@@ -56,9 +44,9 @@ const Statistics: React.FC = () => {
     };
 
     return (
-        <section 
+        <section
             ref={sectionRef}
-            id="stats" 
+            id="stats"
             className="py-20 bg-gray-50 transition-colors duration-300"
         >
             <div className="container mx-auto px-4">
@@ -72,7 +60,7 @@ const Statistics: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    {stats.map((stat, index) => (
+                    {STATISTICS.map((stat, index) => (
                         <div key={index} className="text-center group">
                             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                                 <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
